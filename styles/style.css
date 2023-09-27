@@ -25,3 +25,60 @@ input {
     margin-top: 10px;
     color: #acaafe;
 }
+
+#task2{
+    display: wrap;
+    width: 90%;
+    border-radius: 30px;
+    border: 1px solid #0400ff;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.containerAPOD {
+    border-radius: 30px;
+    border: 1px solid #0400ff;
+    padding: 10px;
+    margin: 10px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    display: none;
+}
+
+#imageNASA{
+    max-width: 100%;
+}
+
+.buttonsContainer{
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.buttons{
+    color: white; 
+    text-align: center;
+    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px; 
+    border: 1px solid #0400ff;
+    background: #0400ff;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.buttons:active{
+    color: #0400ff;
+    border: 1px solid #0400ff;
+    background-color: white; 
+}
+
+#descriptionError{
+    font-size: 20px;
+    color: red;
+}
