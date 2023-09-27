@@ -72,3 +72,32 @@ for (let day = 1; day <= 30; day++) {
 }
 
 // third task
+
+function fetchGithubData(username) {
+    return fetch(`https://api.github.com/users/${username}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Invalid username or GitHub API request error.');
+            }
+            return response.json();
+        });
+}
+
+function displayGithubUser() {
+    const username = document.getElementById('githubInput').value;
+
+    fetchGithubData(username)
+        .then(user => {
+            const descriptionRequest = document.getElementById('descriptionRequest');
+            descriptionRequest.textContent = 'Request completed. Check the console.';
+            console.log('GitHub User', user);
+        })
+        .catch(error => {
+            const descriptionRequest = document.getElementById('descriptionRequest');
+            descriptionRequest.textContent = 'Error fetching GitHub URL: ' + error.message;
+            console.error('Error fetching GitHub data', error);
+        });
+}
+
+const githubInput = document.getElementById('githubInput');
+githubInput.addEventListener('change', displayGithubUser);
