@@ -80,7 +80,7 @@ input {
     background-color: white; 
 }
 
-#descriptionError{
+#descriptionError, #descriptionRequest{
     font-size: 20px;
     color: red;
 }
